@@ -15,21 +15,21 @@ A few resources used in this project:
 > Note : use your own API key 
 
 <br>
-App State is managed using [Provider Package](https://pub.dev/packages/provider)  
-<br><br>
+
+### App State is managed using [Provider Package](https://pub.dev/packages/provider)  
+<br>
 
 ### <u>Home Screen</u>
-<img src = 'images/home_screen.png' width=200 height = 450/>
-<br><br>  
+<img src = 'images/home.png' width=200 height = 450/>
+<br>
 
 ### <u>Pie Chart Screen</u>
 <img src = 'images/pie.png' width=200 height = 450/>  
-<br><br>  
+<br>
 
 ### <u>Cases Screen</u>
 <img src = 'images/cases.png' width=200 height = 450/>
-<br><br>  
+<br>
 
 ### <u>News Screen</u>
-
 <img src = 'images/news.png' width=200 height = 450/>

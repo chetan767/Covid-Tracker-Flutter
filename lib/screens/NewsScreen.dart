@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:tracker/LaunchUrl.dart';
 import 'package:tracker/data/NewsData.dart';
 import 'package:tracker/models/NewsResponse.dart';
 import 'package:tracker/widgets/BottomBar.dart';
-
 
 class NewsScreen extends StatelessWidget {
   @override
@@ -17,6 +17,15 @@ class NewsScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text("News Feed"),
+          actions: [
+            Padding(
+              padding: const EdgeInsets.only(right: 10.0),
+              child: Icon(
+                FontAwesomeIcons.solidNewspaper,
+                color: Colors.white70,
+              ),
+            )
+          ],
         ),
         body: FutureBuilder<List<Articles>>(
           future: Provider.of<NewsData>(context).getNews(),
