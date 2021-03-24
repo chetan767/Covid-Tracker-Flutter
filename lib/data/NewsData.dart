@@ -4,11 +4,12 @@ import 'package:tracker/models/NewsResponse.dart';
 
 var prevMonth = DateTime(date.year, date.month - 1, date.day).toString();
 
+const apikey = '12345678'; // use your own API Key
 String url1 =
-    'https://newsapi.org/v2/everything?q=coronavirus&from=$prevMonth&sortBy=publishedAt&apiKey=0828df72398744e5a1fe8f75838a4c76';
+    'https://newsapi.org/v2/everything?q=coronavirus&from=$prevMonth&sortBy=publishedAt&apiKey=$apikey';
 
 String url2 =
-    'https://newsapi.org/v2/everything?q=covid-19&from=$prevMonth&sortBy=publishedAt&apiKey=0828df72398744e5a1fe8f75838a4c76';
+    'https://newsapi.org/v2/everything?q=covid-19&from=$prevMonth&sortBy=publishedAt&apiKey=$apikey';
 
 class NewsData extends ChangeNotifier {
   NewsResponse newsResponse;
