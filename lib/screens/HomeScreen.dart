@@ -122,7 +122,7 @@ class MyHomePage extends StatelessWidget {
             Container(
               width: 250,
               margin: EdgeInsets.all(25),
-              padding: EdgeInsets.all(5),
+              padding: EdgeInsets.all(10),
               alignment: Alignment.center,
               decoration: BoxDecoration(
                   color: Colors.indigoAccent,
