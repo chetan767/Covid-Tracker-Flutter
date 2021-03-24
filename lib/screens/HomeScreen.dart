@@ -27,8 +27,8 @@ class MyHomePage extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(right: 10),
               child: Icon(
-                Icons.search,
-                color: Colors.blueGrey,
+                FontAwesomeIcons.globe,
+                color: Colors.white70,
               ),
             )
           ],

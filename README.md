@@ -1,16 +1,35 @@
-# tracker
+# Covid-19 Tracker
 
-A new Flutter application.
+A Flutter Application that tracks cases around the world.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+A few resources used in this project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- [Covid -19 API](https://coronavirus-19-api.herokuapp.com/countries)
+- [News API](https://newsapi.org/)  
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<br>  
+
+> Note : use your own API key 
+
+<br>
+App State is managed using [Provider Package](https://pub.dev/packages/provider)  
+<br><br>
+
+### <u>Home Screen</u>
+<img src = 'images/home_screen.png' width=200 height = 450/>
+<br><br>  
+
+### <u>Pie Chart Screen</u>
+<img src = 'images/pie.png' width=200 height = 450/>  
+<br><br>  
+
+### <u>Cases Screen</u>
+<img src = 'images/cases.png' width=200 height = 450/>
+<br><br>  
+
+### <u>News Screen</u>
+
+<img src = 'images/news.png' width=200 height = 450/>
