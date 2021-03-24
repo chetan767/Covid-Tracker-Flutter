@@ -50,35 +50,35 @@ class customTile extends StatelessWidget {
             subtitle: Container(
               margin: EdgeInsets.only(top: 10),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    "${country.todayCases} New Cases",
-                    style: TextStyle(
-                        color: Colors.white70, fontWeight: FontWeight.w600),
+                  Row(
+                    children: [
+                      Text(
+                        "${country.todayCases} New Cases",
+                        style: TextStyle(
+                            color: Colors.white70, fontWeight: FontWeight.w600),
+                      ),
+                      Icon(
+                        Icons.arrow_upward_outlined,
+                        size: 20,
+                        color: Colors.white70,
+                      ),
+                    ],
                   ),
-                  SizedBox(
-                    width: 2,
-                  ),
-                  Icon(
-                    Icons.arrow_upward_outlined,
-                    size: 20,
-                    color: Colors.white70,
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                    "${country.todayDeaths} New Deaths",
-                    style: TextStyle(
-                        color: Colors.white70, fontWeight: FontWeight.w600),
-                  ),
-                  SizedBox(
-                    width: 2,
-                  ),
-                  Icon(
-                    Icons.arrow_upward_outlined,
-                    size: 20,
-                    color: Colors.white70,
+                  Row(
+                    children: [
+                      Text(
+                        "${country.todayDeaths} New Deaths",
+                        style: TextStyle(
+                            color: Colors.white70, fontWeight: FontWeight.w600),
+                      ),
+                      Icon(
+                        Icons.arrow_upward_outlined,
+                        size: 20,
+                        color: Colors.white70,
+                      ),
+                    ],
                   ),
                 ],
               ),
