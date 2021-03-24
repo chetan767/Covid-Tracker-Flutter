@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:move_to_background/move_to_background.dart';
 import 'package:provider/provider.dart';
 import 'package:tracker/LaunchUrl.dart';
 import 'package:tracker/data/CovidData.dart';
@@ -14,33 +15,39 @@ const _url = 'https://www.who.int/emergencies/diseases/novel-coronavirus-2019';
 class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Home"),
-        actions: <Widget>[
-          Padding(
-            padding: EdgeInsets.only(right: 10),
-            child: Icon(
-              Icons.search,
-              color: Colors.blueGrey,
-            ),
-          )
-        ],
-      ),
-      bottomNavigationBar: BottomBar(
-        current: 0,
-      ),
-      body: FutureBuilder<List<Countries>>(
-        future: Provider.of<CovidData>(context).getGlobe(),
-        builder: (context, snapshot) {
-          if (snapshot.hasData) {
-            print("yes");
+    return WillPopScope(
+      onWillPop: () async {
+        MoveToBackground.moveTaskToBack();
+        return false;
+      },
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text("Home"),
+          actions: <Widget>[
+            Padding(
+              padding: EdgeInsets.only(right: 10),
+              child: Icon(
+                Icons.search,
+                color: Colors.blueGrey,
+              ),
+            )
+          ],
+        ),
+        bottomNavigationBar: BottomBar(
+          current: 0,
+        ),
+        body: FutureBuilder<List<Countries>>(
+          future: Provider.of<CovidData>(context).getGlobe(),
+          builder: (context, snapshot) {
+            if (snapshot.hasData) {
+              print("yes");
 
-            return buildContainer(snapshot.data, context);
-          } else {
-            return Center(child: CircularProgressIndicator());
-          }
-        },
+              return buildContainer(snapshot.data, context);
+            } else {
+              return Center(child: CircularProgressIndicator());
+            }
+          },
+        ),
       ),
     );
   }
