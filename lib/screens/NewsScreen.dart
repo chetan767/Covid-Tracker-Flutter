@@ -5,7 +5,6 @@ import 'package:tracker/data/NewsData.dart';
 import 'package:tracker/models/NewsResponse.dart';
 import 'package:tracker/widgets/BottomBar.dart';
 
-TextStyle h2Style = const TextStyle(fontSize: 22);
 
 class NewsScreen extends StatelessWidget {
   @override

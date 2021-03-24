@@ -1,7 +1,7 @@
 import 'package:flag/flag.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:tracker/countryCodes.dart';
+import 'package:tracker/data/countryCodes.dart';
 import 'package:tracker/models/CovidGlobe.dart';
 
 Map codeMap = Codes().inverse(Codes().countryListAlpha2);
