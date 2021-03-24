@@ -57,13 +57,29 @@ class customTile extends StatelessWidget {
                         color: Colors.white70, fontWeight: FontWeight.w600),
                   ),
                   SizedBox(
-                    width: 10,
+                    width: 2,
                   ),
                   Icon(
                     Icons.arrow_upward_outlined,
                     size: 20,
                     color: Colors.white70,
-                  )
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    "${country.todayDeaths} New Deaths",
+                    style: TextStyle(
+                        color: Colors.white70, fontWeight: FontWeight.w600),
+                  ),
+                  SizedBox(
+                    width: 2,
+                  ),
+                  Icon(
+                    Icons.arrow_upward_outlined,
+                    size: 20,
+                    color: Colors.white70,
+                  ),
                 ],
               ),
             ),
